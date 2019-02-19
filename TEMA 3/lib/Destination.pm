@@ -14,23 +14,18 @@ sub new{
 
 	open my $fh2 , '>>' ,$self->{file} 
 		or die "\nUnable to open file : $_";
-	}
+}
 
 sub add_header{ 
 	my @header = shift;
 	unshift(@array, @header);
-	}
+}
 
 sub add_row{
 	my @row = shift;
 	unshift(@array, @row);	
 }
 	
-
-sub return_array{
-	return @array;
-	}
-
 sub sort_rows_by_column{
 	my $column=shift;
 	my $type=shift;
